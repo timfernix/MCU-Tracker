@@ -317,6 +317,9 @@ main { padding: 0 1rem 4rem; }
 }
 .card-meta .card-type { margin-bottom: 0; }
 .entry:nth-child(odd) .card-meta { justify-content: flex-end; }
+@media (max-width: 720px) {
+  .entry:nth-child(odd) .card-meta { justify-content: flex-start; }
+}
 .card-franchise {
   color: var(--stone-color, var(--gold));
   font-size: .72rem;
