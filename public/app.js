@@ -129,7 +129,7 @@ function renderTimeline(items) {
       <h2 class="card-title">${item.title}</h2>
       <div class="card-meta">
         <span class="card-type">${item.type}</span>
-        <span class="card-franchise">${item.franchise === 'MCU' ? `MCU · Phase ${item.phase}` : item.franchise}</span>
+        <span class="card-franchise">${item.franchise === 'MCU' ? `MCU · Phase ${item.phase}` : `${item.franchise} Universe`}</span>
       </div>
       <div>
         <span class="watch-toggle status-control" id="${toggleId}" aria-label="Status: ${statusLabel(item.watched)}">
