@@ -1,0 +1,10 @@
+name = "mcu-tracker"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "public"
+
+# Created by: wrangler d1 create mcu_tracker_db
+# Paste the returned database_id below before deploying.
+[[d1_databases]]
+binding = "DB"
+database_name = "mcu_tracker_db"
+database_id = "be0d1646-ee1b-4c9b-aaa7-5db341c75ab6"

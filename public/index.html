@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCU Watch Timeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Barlow+Condensed:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+
+  <header class="hero">
+    <h1 class="hero-title">MCU Watchlist</h1>
+
+    <div class="gauntlet" id="gauntlet" aria-label="Watch progress by phase">
+      <!-- stones injected by app.js -->
+    </div>
+  </header>
+
+  <main>
+    <section class="overview" aria-labelledby="overview-title">
+      <div class="overview-stats" aria-label="Watch statistics">
+        <div class="stat"><strong id="stat-watched">0</strong><span>Watched</span></div>
+        <div class="stat"><strong id="stat-remaining">0</strong><span>Remaining</span></div>
+        <div class="stat"><strong id="stat-progress">0%</strong><span>Complete</span></div>
+      </div>
+      <div class="phase-summary" id="phase-summary" aria-label="Progress by phase"></div>
+    </section>
+
+    <section class="timeline-tools" aria-label="Timeline controls">
+      <label class="search-box">
+        <span>Search the saga</span>
+        <input id="search-input" type="search" placeholder="Find a title..." />
+      </label>
+      <div class="filter-group" role="group" aria-label="Filter titles">
+        <button class="filter-button active" type="button" data-filter="all">All <span id="count-all">63</span></button>
+        <button class="filter-button" type="button" data-filter="watching">Watching <span id="count-watching">1</span></button>
+        <button class="filter-button" type="button" data-filter="remaining">Remaining <span id="count-remaining">27</span></button>
+        <button class="filter-button" type="button" data-filter="watched">Watched <span id="count-watched">36</span></button>
+      </div>
+    </section>
+    <p class="empty-state" id="empty-state" hidden>No titles match your current filter.</p>
+    <ol class="timeline" id="timeline" aria-live="polite"></ol>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
